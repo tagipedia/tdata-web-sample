@@ -83,6 +83,8 @@ Response
 }
 ```
 
+##### Associate map with created content service
+Contact Tagipedia team and we will associate drawn map to your created content service.
 
 ## Add tdata to your App
 
