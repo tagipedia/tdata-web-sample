@@ -188,8 +188,8 @@ add script in your controller.
   $(document).ready(function(){
     const tdata = new TData({
     selector: '#analyticsV2iframe',
-    access_token: urlParams.get('access_token'),
-    path: '#!/services/' + urlParams.get('content_service_id') + '/analyticsV2'
+    access_token: access_token,
+    path: '#!/services/' + content_service_id + '/analyticsV2'
   });
 ```
 if you want to send initial date
