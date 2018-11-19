@@ -194,18 +194,11 @@ add script in your controller.
 ```
 if you want to send initial date
 ```javascript
-  tdata.addListener((action)=> {
-    switch (action.type) {
-      case 'READY':
-        tdata.dispatch({
-            type: 'SET_DATE',
-            start_date: new Date('2018-11-17'),
-            end_date: new Date('2018-11-19')
-        });
-        break;
-      default:
-    }
-  });
+  tdata.dispatch({
+          type: 'SET_DATE',
+          start_date: new Date('2018-11-17'),
+          end_date: new Date('2018-11-19')
+      });
 ```
 
 &nbsp;&nbsp;&nbsp;&nbsp; **content_service_id**  get from *<a href="#creating-content-service"> creating content service</a>*
