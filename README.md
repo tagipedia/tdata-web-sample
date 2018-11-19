@@ -170,3 +170,38 @@ add script in your controller.
 &nbsp;&nbsp;&nbsp;&nbsp; **content_service_id**  get from *<a href="#creating-content-service"> creating content service</a>*
 
 &nbsp;&nbsp;&nbsp;&nbsp; **access_token**  get from *<a href="#creating-user"> creating user</a>*
+
+
+____
+
+#### New Analytics UI iframe
+
+add this div where you want to render the AnalyticsV2 iframe.
+
+```html
+  <div id="analyticsV2iframe"></div>
+```
+
+add script in your controller.
+
+```javascript
+  $(document).ready(function(){
+    const tdata = new TData({
+    selector: '#analyticsV2iframe',
+    access_token: access_token,
+    path: '#!/services/' + content_service_id + '/analyticsV2'
+  });
+```
+if you want to send initial date
+```javascript
+  tdata.dispatch({
+          type: 'SET_DATE',
+          start_date: new Date('2018-11-17'),
+          end_date: new Date('2018-11-19')
+      });
+```
+
+&nbsp;&nbsp;&nbsp;&nbsp; **content_service_id**  get from *<a href="#creating-content-service"> creating content service</a>*
+
+&nbsp;&nbsp;&nbsp;&nbsp; **access_token**  get from *<a href="#creating-user"> creating user</a>*
+
